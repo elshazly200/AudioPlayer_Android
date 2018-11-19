@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actAudio">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="403dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="347dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="402dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="367dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/btnPlay"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:onClick="playAudio_Clicked"
+                android:tag="Play"
+                app:srcCompat="@drawable/play"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="232dp" />
+
+            <SeekBar
+                android:id="@+id/seekSong"
+                android:layout_width="249dp"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="60dp"
+                tools:layout_editor_absoluteY="232dp" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="92dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="325dp"
+                tools:layout_editor_absoluteY="232dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="367dp"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="285dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="41dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/volumepic" />
+
+            <SeekBar
+                android:id="@+id/seekVolume"
+                android:layout_width="249dp"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <TextView
+                android:id="@+id/txtVolume"
+                android:layout_width="73dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="665dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
